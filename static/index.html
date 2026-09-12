@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahesh Chatbot</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div>
+        <h1>Mahesh<br>Chatbot</h1>
+      </div>
+      <button type="button" class="new-chat-button" id="new-chat">+ New chat</button>
+      <div class="chat-list" id="chat-list" aria-label="Chat history"></div>
+      <div class="sidebar-note">
+        <span class="status-dot" id="status-dot"></span>
+        <div>
+          <strong id="status-label">Connecting</strong>
+          <p>Private by default.<br>Your prompts stay on this machine.</p>
+        </div>
+      </div>
+    </aside>
+
+    <section class="chat-panel">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">CONVERSATION</p>
+          <h2>Ask anything</h2>
+        </div>
+        <div class="topbar-actions">
+          <div class="model-picker">
+            <label for="model">MODEL</label>
+            <div class="model-controls">
+              <select id="model" disabled></select>
+              <button type="button" class="secondary-button" id="refresh-models">Refresh</button>
+            </div>
+          </div>
+          <button type="button" class="secondary-button" id="clear-chat">Clear chat</button>
+        </div>
+      </header>
+
+
+      <div class="messages" id="messages" aria-live="polite">
+        <div class="welcome-message" id="welcome-message">
+          <p class="welcome-kicker">YOUR LOCAL THINKING PARTNER</p>
+          <h3>What are you<br>curious about?</h3>
+          <p>Choose a model above and start a private conversation with Ollama.</p>
+          <div class="suggestions">
+            <button data-prompt="Explain a difficult idea in simple terms">Explain an idea</button>
+            <button data-prompt="Help me plan my day">Plan my day</button>
+            <button data-prompt="Give me a creative writing prompt">Spark creativity</button>
+          </div>
+        </div>
+      </div>
+
+      <form class="composer" id="composer">
+        <textarea id="prompt" rows="1" placeholder="Ask your local model anything..." aria-label="Message"></textarea>
+        <div class="composer-actions">
+          <button type="button" class="action-button" id="stop-generation" disabled>Stop</button>
+          <button type="button" class="action-button" id="copy-last" disabled>Copy</button>
+          <button class="send-button" type="submit" aria-label="Send message" title="Send message">
+            <span>Send</span>
+            <span class="arrow">&#8599;</span>
+          </button>
+        </div>
+      </form>
+      <p class="composer-hint">Enter to send <span>•</span> Shift + Enter for a new line</p>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
