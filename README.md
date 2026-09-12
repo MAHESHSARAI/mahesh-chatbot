@@ -20,8 +20,6 @@ ollama pull llama3.2
 ollama list
 ```
 
-Press `Ctrl+C` in the server terminal to stop the web app. Use `ollama stop <model>` to stop a loaded model.
-
 ## How it works
 
 - The browser sends chat messages to the local Python server.
