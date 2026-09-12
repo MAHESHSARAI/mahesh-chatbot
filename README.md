@@ -2,6 +2,8 @@
 
 A small private chat app for asking questions to models running on your computer through Ollama.
 
+![Mahesh Chatbot preview](static/mahesh-chatbot-preview.png)
+
 ## Run it
 
 Make sure Ollama is installed and running. From the repository root:
