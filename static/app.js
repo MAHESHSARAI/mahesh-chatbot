@@ -171,7 +171,7 @@ function addMessage(role, text = '') {
   message.className = `message ${role}`;
   const avatar = document.createElement('div');
   avatar.className = 'avatar';
-  avatar.textContent = role === 'user' ? 'YOU' : 'LO';
+  avatar.textContent = role === 'user' ? 'YOU' : 'AI';
   const bubble = document.createElement('div');
   bubble.className = 'bubble';
   if (role === 'assistant') {
